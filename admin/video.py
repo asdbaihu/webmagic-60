@@ -5,16 +5,16 @@ import random
 import re
 # 网页的请求头
 header = {
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+    # 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
     # 'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
-    # 'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
 }
 
 if __name__ == '__main__':
     db = pymysql.connect("localhost", "root", "root", "gather_data")
     cursor = db.cursor()
-    count = 1
-    while count <= 141:
+    count = 152
+    while count <= 402:
 
         select_sql = """SELECT page_url FROM li_video WHERE id = '%d'"""%int(count)
         cursor.execute(select_sql)

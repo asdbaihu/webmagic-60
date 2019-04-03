@@ -80,7 +80,7 @@ def get_page(url):
         remark = soup.select('.tags-bottom')[0].text.replace(' ','')
 
         # 标题打印
-        print(title1)
+        print(img_url)
 
         # SQL 插入语句
         sql = """INSERT INTO ajk_resold_house_info(title,
